@@ -13,49 +13,50 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge
+package dev.shreyaspatil.petykt
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.animation.ExperimentalAnimationApi
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.androiddevchallenge.ui.theme.MyTheme
+import dev.shreyaspatil.petykt.ui.theme.PetyTheme
 
+@ExperimentalComposeUiApi
+@ExperimentalAnimationApi
+@ExperimentalFoundationApi
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MyTheme {
-                MyApp()
-            }
+            PetyMain()
         }
     }
 }
 
-// Start building your app here!
+@ExperimentalComposeUiApi
+@ExperimentalAnimationApi
+@ExperimentalFoundationApi
 @Composable
-fun MyApp() {
-    Surface(color = MaterialTheme.colors.background) {
-        Text(text = "Ready... Set... GO!")
+fun PetyMain() {
+    PetyTheme {
+        Surface(color = MaterialTheme.colors.background) {
+            PetyNavigation()
+        }
     }
 }
 
-@Preview("Light Theme", widthDp = 360, heightDp = 640)
+@ExperimentalComposeUiApi
+@ExperimentalAnimationApi
+@ExperimentalFoundationApi
+@Preview(showBackground = true)
 @Composable
-fun LightPreview() {
-    MyTheme {
-        MyApp()
-    }
-}
-
-@Preview("Dark Theme", widthDp = 360, heightDp = 640)
-@Composable
-fun DarkPreview() {
-    MyTheme(darkTheme = true) {
-        MyApp()
-    }
+fun DefaultPreview() {
+    PetyMain()
 }
