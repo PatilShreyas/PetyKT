@@ -1,6 +1,14 @@
 # PetyKT 🐶
 
-Awesome pet adoption app built to demonstrate the use of super powerful and modern UI development toolkit i.e. Jetpack Compose UI for __#AndroidDevChallenge_ Made with love ❤️for developers.
+Awesome pet adoption app built to demonstrate the use of super powerful and modern UI development toolkit i.e. Jetpack Compose UI for _#AndroidDevChallenge_ Made with love ❤️for developers.
+
+## Preview
+
+You can watch video of the application [here](results/video.mp4)
+
+Main Listing | Details | Details (After adopted)
+--- | --- | --- |
+![](https://github.com/PatilShreyas/PetyKT/blob/main/results/screenshot_1.png) | ![](https://github.com/PatilShreyas/PetyKT/blob/main/results/screenshot_2.png) | ![](https://github.com/PatilShreyas/PetyKT/blob/main/results/screenshot_3.png)
 
 ## License
 ```
