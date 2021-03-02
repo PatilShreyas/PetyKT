@@ -13,47 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.ui.theme
+package dev.shreyaspatil.petykt.ui.theme
 
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
-import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 
-private val DarkColorPalette = darkColors(
-    primary = purple200,
-    primaryVariant = purple700,
-    secondary = teal200
-)
-
-private val LightColorPalette = lightColors(
-    primary = purple500,
-    primaryVariant = purple700,
-    secondary = teal200
-
-        /* Other default colors to override
-    background = Color.White,
-    surface = Color.White,
+private val PetyColorPalette = lightColors(
+    primary = Bunker,
+    primaryVariant = Bunker,
+    secondary = IrisBlue,
+    background = Whisper,
     onPrimary = Color.White,
-    onSecondary = Color.Black,
     onBackground = Color.Black,
-    onSurface = Color.Black,
-    */
 )
 
 @Composable
-fun MyTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable() () -> Unit) {
-    val colors = if (darkTheme) {
-        DarkColorPalette
-    } else {
-        LightColorPalette
-    }
-
+fun PetyTheme(content: @Composable() () -> Unit) {
     MaterialTheme(
-        colors = colors,
-        typography = typography,
-        shapes = shapes,
+        colors = PetyColorPalette,
+        typography = Typography,
+        shapes = Shapes,
         content = content
     )
 }
